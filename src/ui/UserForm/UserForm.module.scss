@@ -6,9 +6,9 @@
   align-items: stretch;
   justify-content: space-around;
   min-height: 150px;
-  $textColor: #3a3e4d;
-  box-shadow: 0 0 50px 50px #b2a7a7;
-  background-color: #b2a7a7;
+  $textColor: $formTextColor;
+  box-shadow: 0 0 50px 50px $textInputColor;
+  background-color: $textInputColor;
   label {
     min-width: 100px;
     display: flex;
@@ -16,9 +16,9 @@
     color: $textColor;
   }
   button {
-    color: #b2a7a7;
+    color: $textInputColor;
     &:hover {
-      background-color: #353535;
+      background-color: $hoverButtonColor;
     }
   }
 }

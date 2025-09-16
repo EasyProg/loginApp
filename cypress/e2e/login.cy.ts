@@ -6,7 +6,8 @@ type User = {
   email: string;
   firstName: string;
   lastName: string;
-  id: number;
+  password: string;
+  id?: number;
 };
 
 const protectedRoute = "/";
@@ -17,7 +18,7 @@ describe("The Login Page Flow", () => {
     cy.visit(Cypress.env("apiUrl")); // change URL to match your dev URL
   });
 
-  const mockUser = {
+  const mockUser: User = {
     email: Cypress.env("testEmail"),
     password: Cypress.env("testPassword"),
     firstName: "Test User",
@@ -120,7 +121,7 @@ describe("The Login Page Flow", () => {
     cy.get<HTMLButtonElement>('[data-cy="submit"]').click();
 
     cy.wait("@loginRequest").then((interception) => {
-      const requestJwt: AuthResponse = interception.response.body.data.login;
+      const requestJwt: AuthResponse = interception.response?.body.data.login;
       expect(requestJwt.jwt).to.equal(Cypress.env("testJwt"));
     });
 
