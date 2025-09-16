@@ -1,0 +1,28 @@
+@use "../../colors.scss" as *;
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+  min-height: 50px;
+}
+
+.formField {
+  display: flex;
+}
+
+.formInput {
+  min-width: 200px;
+  min-height: 30px;
+  padding: 0 15px;
+  border: 1px solid $borderColor;
+  color: $textInputColor;
+  outline: none;
+}
+
+.errorBlock {
+  font-size: 12px;
+  color: $errorText;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}

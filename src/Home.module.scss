@@ -1,0 +1,13 @@
+.userInfo {
+  box-shadow: 0 0 50px 50px #b2a7a7;
+  background-color: #b2a7a7;
+  > div {
+    margin: 5px 5px;
+    font-size: 20px;
+    color: #545252;
+  }
+  &::before {
+    backdrop-filter: 30px;
+    position: absolute;
+  }
+}

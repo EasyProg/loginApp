@@ -1,0 +1,31 @@
+@use "../../colors.scss" as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+  min-height: 150px;
+  $textColor: #3a3e4d;
+  box-shadow: 0 0 50px 50px #b2a7a7;
+  background-color: #b2a7a7;
+  label {
+    min-width: 100px;
+    display: flex;
+    align-items: flex-start;
+    color: $textColor;
+  }
+  button {
+    color: #b2a7a7;
+    &:hover {
+      background-color: #353535;
+    }
+  }
+}
+
+.errorBlock {
+  min-height: 20px;
+  font-size: 12px;
+  color: $errorText;
+  margin-top: 0 !important;
+}
