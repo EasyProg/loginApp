@@ -15,3 +15,7 @@ npm run build
 # use test useremail and password to test it
 
 http://localhost:5173/
+
+# cypress tests running with (app must be reachable with localhost link)
+
+npx cypress open

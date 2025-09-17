@@ -18,8 +18,7 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUncheckedSideEffectImports": true
+    "noUnusedLocals": true
   },
   "include": ["src", "cypress"]
 }

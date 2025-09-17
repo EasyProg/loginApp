@@ -16,7 +16,7 @@ export const Home: FC = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
-  const { id } = location.state;
+  const id = location.state?.id;
   const { data } = useQuery<ResponceData>(USER_QUERY, {
     variables: { id },
   });
