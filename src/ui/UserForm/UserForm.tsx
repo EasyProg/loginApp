@@ -15,11 +15,11 @@ type InputLogin = {
   password: String;
 };
 
-type ResponceData = {
+type ResponseData = {
   login: { jwt: string };
 };
 
-type ErrorResponce = {
+type ErrorResponse = {
   errors: Array<{ message: string }>;
 };
 
@@ -37,7 +37,7 @@ export const UserForm: FC = () => {
   });
 
   const [userLogin, { data, loading, error }] =
-    useMutation<ResponceData>(USER_LOGIN);
+    useMutation<ResponseData>(USER_LOGIN);
 
   const onSubmit: SubmitHandler<InputLogin> = (formData) => {
     userLogin({ variables: formData });
@@ -46,7 +46,7 @@ export const UserForm: FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const typedError = error as unknown as ErrorResponce;
+    const typedError = error as unknown as ErrorResponse;
     if (typedError?.errors) {
       showErrorMessages(typedError?.errors);
     }
